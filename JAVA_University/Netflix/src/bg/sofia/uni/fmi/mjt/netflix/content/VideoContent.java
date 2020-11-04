@@ -3,7 +3,7 @@ package bg.sofia.uni.fmi.mjt.netflix.content;
 import bg.sofia.uni.fmi.mjt.netflix.content.enums.Genre;
 import bg.sofia.uni.fmi.mjt.netflix.content.enums.PgRating;
 
-public abstract sealed class VideoContent permits Movie,Series{
+public abstract sealed class VideoContent permits Movie, Series {
 
     private String name;
     private Genre genre;

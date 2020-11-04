@@ -3,7 +3,7 @@ package bg.sofia.uni.fmi.mjt.netflix.content;
 import bg.sofia.uni.fmi.mjt.netflix.content.enums.Genre;
 import bg.sofia.uni.fmi.mjt.netflix.content.enums.PgRating;
 
-public non-sealed class Series extends VideoContent implements Streamable{
+public non-sealed class Series extends VideoContent implements Streamable {
 
     private Episode[] episodes;
     private int duration;
@@ -12,8 +12,8 @@ public non-sealed class Series extends VideoContent implements Streamable{
         super(name, genre, rating);
         this.episodes = episodes;
 
-        for(Episode episode:episodes){
-            duration+=episode.duration();
+        for (Episode episode : episodes) {
+            duration += episode.duration();
         }
     }
 

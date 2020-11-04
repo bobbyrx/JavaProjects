@@ -8,15 +8,15 @@ import bg.sofia.uni.fmi.mjt.netflix.exceptions.UserNotFoundException;
 
 import java.time.LocalDateTime;
 
-public class Netflix implements StreamingService{
+public class Netflix implements StreamingService {
 
     private Account[] accounts;
     private Streamable[] streamableContent;
     private int[] timeWatchEachStreamableContent;
 
-    private boolean isAccountFound(Account user){
-        for(Account name:this.getAccounts()){
-            if(name.equals(user))return true;
+    private boolean isAccountFound(Account user) {
+        for (Account name : this.getAccounts()) {
+            if (name.equals(user)) return true;
         }
         return false;
     }
@@ -24,7 +24,7 @@ public class Netflix implements StreamingService{
     public Netflix(Account[] accounts, Streamable[] streamableContent) {
         this.accounts = accounts;
         this.streamableContent = streamableContent;
-        timeWatchEachStreamableContent=new int[streamableContent.length];
+        timeWatchEachStreamableContent = new int[streamableContent.length];
     }
 
     public Account[] getAccounts() {
@@ -46,31 +46,31 @@ public class Netflix implements StreamingService{
     @Override
     public void watch(Account user, String videoContentName) throws ContentUnavailableException {
 
-       if(!isAccountFound(user)){
-           throw new UserNotFoundException(user.username()+" not found!");
-       }
+        if (!isAccountFound(user)) {
+            throw new UserNotFoundException(user.username() + " not found!");
+        }
 
         int userAge = LocalDateTime.now().compareTo(user.birthdayDate());
 
-       if(findByName(videoContentName)==null){
-           throw new ContentNotFoundException(videoContentName+" not found!");
-       }
+        if (findByName(videoContentName) == null) {
+            throw new ContentNotFoundException(videoContentName + " not found!");
+        }
 
-        switch (findByName(videoContentName).getRating()){
+        switch (findByName(videoContentName).getRating()) {
             case PG13:
-                if(userAge<14){
-                    throw new ContentUnavailableException(user.username()+" must be 14 or above to watch this video!");
+                if (userAge < 14) {
+                    throw new ContentUnavailableException(user.username() + " must be 14 or above to watch this video!");
                 }
                 break;
             case NC17:
-                if(userAge<18){
-                    throw new ContentUnavailableException(user.username()+" must be 18 or above to watch this video!");
+                if (userAge < 18) {
+                    throw new ContentUnavailableException(user.username() + " must be 18 or above to watch this video!");
                 }
                 break;
         }
 
-        for(int i=0;i<this.getStreamableContent().length;i++){
-            if(this.getStreamableContent()[i].getTitle().equals(videoContentName)){
+        for (int i = 0; i < this.getStreamableContent().length; i++) {
+            if (this.getStreamableContent()[i].getTitle().equals(videoContentName)) {
                 this.timeWatchEachStreamableContent[i]++;
                 break;
             }
@@ -80,10 +80,10 @@ public class Netflix implements StreamingService{
 
     @Override
     public Streamable findByName(String videoContentName) {
-        Streamable streamable=null;
-        for(Streamable stream:this.getStreamableContent()){
-            if(stream.getTitle().equals(videoContentName)){
-                streamable=stream;
+        Streamable streamable = null;
+        for (Streamable stream : this.getStreamableContent()) {
+            if (stream.getTitle().equals(videoContentName)) {
+                streamable = stream;
             }
         }
         return streamable;
@@ -91,26 +91,26 @@ public class Netflix implements StreamingService{
 
     @Override
     public Streamable mostViewed() {
-        int maxViewed= Integer.MIN_VALUE;
-        int indexValue=-1;
-        for(int i=0;i<this.timeWatchEachStreamableContent.length;i++){
-            if(maxViewed<this.timeWatchEachStreamableContent[i]){
-                maxViewed=this.timeWatchEachStreamableContent[i];
-                indexValue=i;
+        int maxViewed = Integer.MIN_VALUE;
+        int indexValue = -1;
+        for (int i = 0; i < this.timeWatchEachStreamableContent.length; i++) {
+            if (maxViewed < this.timeWatchEachStreamableContent[i]) {
+                maxViewed = this.timeWatchEachStreamableContent[i];
+                indexValue = i;
             }
         }
-        Streamable streamable=null;
-        if(maxViewed!=0){
-            streamable=this.getStreamableContent()[indexValue];
+        Streamable streamable = null;
+        if (maxViewed != 0) {
+            streamable = this.getStreamableContent()[indexValue];
         }
         return streamable;
     }
 
     @Override
     public int totalWatchedTimeByUsers() {
-        int countWatchedMinute=0;
-        for(int i=0;i<this.timeWatchEachStreamableContent.length;i++){
-            countWatchedMinute+=this.getStreamableContent()[i].getDuration()*this.timeWatchEachStreamableContent[i];
+        int countWatchedMinute = 0;
+        for (int i = 0; i < this.timeWatchEachStreamableContent.length; i++) {
+            countWatchedMinute += this.getStreamableContent()[i].getDuration() * this.timeWatchEachStreamableContent[i];
         }
         return countWatchedMinute;
     }

@@ -7,7 +7,10 @@ import bg.sofia.uni.fmi.mjt.netflix.exceptions.ContentUnavailableException;
 public interface StreamingService {
 
     void watch(Account user, String videoContentName) throws ContentUnavailableException;
+
     Streamable findByName(String videoContentName);
+
     Streamable mostViewed();
+
     int totalWatchedTimeByUsers();
 }
