@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -87,6 +88,7 @@ public class TaggerTest {
             + "Florence,United States\n";
 
     private final Tagger tagger = new Tagger(new StringReader(cityCountry));
+    private final Tagger taggerEmpty = new Tagger(new StringReader(""));
 
     @Test(expected = RuntimeException.class)
     public void testTaggerWithNull() {
@@ -156,6 +158,25 @@ public class TaggerTest {
         tagger.tagCities(new StringReader(text), new StringWriter(textTagged.length()));
         assertEquals("Get N Most Tagged Cities doesn't work!",
                 newArr, tagger.getNMostTaggedCities(3));
+    }
+
+    @Test
+    public void testGetNMostTaggedCitiesIfEmpty() {
+        assertEquals("Get N Most Tagged Cities doesn't "
+                        + "work when it gives empty collection!",
+                new ArrayList<>(), taggerEmpty.getNMostTaggedCities(3));
+    }
+
+    @Test
+    public void testGetAllTaggedCities() {
+        String stringLine = "Plovdiv Sofia Paris Amsterdam Central Venice Kyoto Of Most"
+                + " Barcelona Athens Sydney San Mexico Allende Best Budapest Lisbon Florence";
+        ArrayList<String> newArr = new ArrayList<>(Arrays.asList(stringLine.split(" ")));
+        tagger.tagCities(new StringReader(text), new StringWriter(textTagged.length()));
+        assertEquals("Get All Tagged Cities doesn't work!",
+                newArr, tagger.getAllTaggedCities());
+        assertEquals("Get All Tagged Cities doesn't work when it is empty!",
+                new ArrayList<>(), taggerEmpty.getAllTaggedCities());
     }
 
     @Test

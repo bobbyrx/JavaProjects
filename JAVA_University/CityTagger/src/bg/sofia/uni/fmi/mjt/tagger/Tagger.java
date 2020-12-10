@@ -12,6 +12,8 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Tagger {
 
@@ -117,14 +119,15 @@ public class Tagger {
      */
     public void tagCities(Reader text, Writer output) {
         numberOfTagsForCity.clear();
-        try (var readText = new BufferedReader(text); var writeText = new BufferedWriter(output)) {
+        Pattern pat = Pattern.compile(".*\\R|.+\\z");
+        try (var readText = new Scanner(new BufferedReader(text));
+             var writeText = new BufferedWriter(output)) {
             String line;
-            while ((line = readText.readLine()) != null) {
+            while ((line = readText.findWithinHorizon(pat, 0)) != null) {
                 for (String city : this.listOfCityCountry.keySet()) {
                     line = this.countTagForCity(line, city);
                 }
                 writeText.write(line);
-                writeText.newLine();
             }
             writeText.flush();
         } catch (IOException e) {
