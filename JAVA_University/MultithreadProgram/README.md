@@ -17,71 +17,11 @@
 
 Класът трябва да има публичен конструктор, който приема цяло число (броя на готвачите в ресторанта) и имплементира интерфейса `Restaurant`:
 
-```java
-package bg.sofia.uni.fmi.mjt.restaurant;
-
-public interface Restaurant {
-
-    /**
-     * Adds an order.
-     **/
-    void submitOrder(Order order);
-
-    /**
-     * Returns the next order to be cooked
-     * and removes it from the pending orders
-     **/
-    Order nextOrder();
-
-    /**
-     * Returns the total number of submitted orders.
-     **/
-    int getOrdersCount();
-
-    /**
-     * Returns the restaurant's chefs.
-     **/
-    Chef[] getChefs();
-
-    /**
-     * Prepares the restaurant for closing. When this method is called,
-     * the chefs complete any pending orders and then finish work.
-     **/
-    void close();
-
-}
-
-```
-
-:star: Забележкa:
-
-- Използвайте подходяща структура от данни, в която да съхранявате подадените, но все още неизпълнени поръчки.
-
 **2. Създайте `record Order(Meal meal, AbstractCustomer customer)`**
 
 Той описва поръчка от клиент, като приемаме, че една поръчка съдържа точно едно ястие.
 
 **3. Създайте абстрактен клас `Customer`, който е нишка, и има следния вид:**
-
-```java
-package bg.sofia.uni.fmi.mjt.restaurant.customer;
-
-public abstract class AbstractCustomer extends Thread {
-
-    public AbstractCustomer(Restaurant restaurant) {
-        throw new UnsupportedOperationException("Method not yet implemented");
-    }
-
-    @Override
-    public void run() {
-        throw new UnsupportedOperationException("Method not yet implemented");
-    }
-
-    public abstract boolean hasVipCard();
-
-}
-
-```
 
 Има два вида клиенти, моделирани от класовете `Customer` и `VipCustomer`, наследяващи `AbstractCustomer` и имащи публичен конструктор, приемащ параметър тип `Restaurant`. Поръчките на VIP клиентите (притежатели на VIP карта) се обслужват с приоритет спрямо тези на обикновените клиенти, като отделно ресторантът подрежда VIP и обикновените поръчки като ред на изпълнение спрямо времето (в низходящ ред), необходимо за приготвяне на даденото ястие.
 
@@ -94,74 +34,8 @@ public abstract class AbstractCustomer extends Thread {
 
 редът на приготвяне следва да бъде 1, 4, 3 и 2.
 
-Създаването и стартирането на клиентите може да направите във ваш клас, в който да реализирате симулацията и да я тествате ръчно, а също и в автоматичните тестове.
-Всеки клиент избира ястие от менюто. Това отнема известно време, което можем да моделираме с паузиране на нишката - клиент за случаен отрязък от 1 до 5 секунди, след което клиентът поръчва избраното ястие.
-
-Ястията от менюто на ресторанта са описани в `enum`-a `Meal`:
-
-```java
-package bg.sofia.uni.fmi.mjt.restaurant;
-
-import java.util.Random;
-
-public enum Meal {
-
-    PIZZA("Pizza", 20), MUSAKA("Musaka", 30), SALAD("Salad", 5), SPAGHETTI("Spaghetti", 25);
-
-    private static final Meal[] ALL_MEALS = Meal.values();
-    private static final Random MEAL_RANDOM = new Random();
-
-    private final String name;
-    private final int cookingTime;
-
-    private Meal(String type, int cookingTime) {
-        this.name = type;
-        this.cookingTime = cookingTime;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getCookingTime() {
-        return cookingTime;
-    }
-
-    public static Meal chooseFromMenu() {
-        return ALL_MEALS[MEAL_RANDOM.nextInt(ALL_MEALS.length)];
-    }
-
-}
-```
-
 **4. Създайте клас `Chef`, който е нишка, и има следния вид:**
 
-```java
-package bg.sofia.uni.fmi.mjt.restaurant;
-
-public class Chef extends Thread {
-
-    private final int id;
-    private final Restaurant restaurant;
-
-    public Chef(int id, Restaurant restaurant) {
-        throw new UnsupportedOperationException("Method not yet implemented");
-    }
-
-    @Override
-    public void run() {
-        throw new UnsupportedOperationException("Method not yet implemented");
-    }
-
-    /**
-     * Returns the total number of meals that this chef has cooked.
-     **/
-    public int getTotalCookedMeals() {
-        throw new UnsupportedOperationException("Method not yet implemented");
-    }
-
-}
-```
 
   Задачата на готвачите е да приготвят ястията, поръчани от клиентите:
 
@@ -218,6 +92,4 @@ test
    ├─ MJTDiningPlaceTest.java
    └─ (...)
 ```
-
-В [sapera.org](http://grader.sapera.org/) качете `zip` архив на `src` и `test` директориите.
 ~~~
