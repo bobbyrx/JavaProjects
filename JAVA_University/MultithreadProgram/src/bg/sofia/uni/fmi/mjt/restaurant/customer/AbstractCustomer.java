@@ -4,8 +4,11 @@ import bg.sofia.uni.fmi.mjt.restaurant.Meal;
 import bg.sofia.uni.fmi.mjt.restaurant.Order;
 import bg.sofia.uni.fmi.mjt.restaurant.Restaurant;
 
+import java.util.Random;
+
 public abstract class AbstractCustomer extends Thread {
 
+    private static final Random RANDOM = new Random();
     private final Restaurant restaurant;
 
     public AbstractCustomer(Restaurant restaurant) {
@@ -15,16 +18,12 @@ public abstract class AbstractCustomer extends Thread {
     @Override
     public void run() {
         try {
-            sleep(10);
+            Thread.sleep(RANDOM.nextInt(50));
         } catch (InterruptedException e) {
+            System.err.print("Unexpected exception was thrown: " + e.getMessage());
             e.printStackTrace();
         }
-        synchronized (this.restaurant) {
-            Order newOrder = new Order(Meal.chooseFromMenu(), this);
-            System.out.println("Customer " + this.getId() + " orders " + newOrder.meal().getName());
-            this.restaurant.submitOrder(newOrder);
-            //this.restaurant.notifyAll();
-        }
+        this.restaurant.submitOrder(new Order(Meal.chooseFromMenu(), this));
     }
 
     public abstract boolean hasVipCard();

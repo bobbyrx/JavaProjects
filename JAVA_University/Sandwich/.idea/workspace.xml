@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2eae6ad-a87f-493b-ac04-d9b459e602e4" name="Default Changelist" comment="" />
+    <list default="true" id="c2eae6ad-a87f-493b-ac04-d9b459e602e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../AbstractClasses/AbstractClassPart1/AbstractClassPart1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClasses/AbstractClassPart1/AbstractClassPart1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClasses/BinaryTreeSearch/BinaryTreeSearch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClasses/BinaryTreeSearch/BinaryTreeSearch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BasicStuff/Compare/Compare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../BasicStuff/Compare/Compare.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BasicStuff/Starting/Starting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../BasicStuff/Starting/Starting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/InterfaceChallenge/InterfaceChallenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/InterfaceChallenge/InterfaceChallenge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CityTagger/CityTagger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CityTagger/CityTagger.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sandwich.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sandwich.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCart/ShoppingCart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ShoppingCart/ShoppingCart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SocialDistancing/SocialDistancing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SocialDistancing/SocialDistancing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpellCheckTool/SpellCheckTool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpellCheckTool/SpellCheckTool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpotifyExplorer/SpotifyExplorer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpotifyExplorer/SpotifyExplorer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LinkedList/LinkListChallenge/LinkListChallenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LinkedList/LinkListChallenge/LinkListChallenge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/ANewChallenge/ANewChallenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/ANewChallenge/ANewChallenge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/ByteShortIntLong/ByteShortIntLong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/ByteShortIntLong/ByteShortIntLong.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/CharAndBoolen/CharAndBoolen.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/CharAndBoolen/CharAndBoolen.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/FloatAndDouble/FloatAndDouble.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/FloatAndDouble/FloatAndDouble.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/IfStatement/IfStatement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/IfStatement/IfStatement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/OperatorsAndExpression/OperatorsAndExpression.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/OperatorsAndExpression/OperatorsAndExpression.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/PrimitiveTypeChallenge/PrimitiveTypeChallenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/PrimitiveTypeChallenge/PrimitiveTypeChallenge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SuperBasicStuff/String/String.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SuperBasicStuff/String/String.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +35,19 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1j00vDfuJkygSdh3nmmazmet30R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MultithreadProgram" />
   </component>
   <component name="RunManager" selected="Application.newClass">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -70,8 +95,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.SandwichExtractor" />
       <item itemvalue="Application.Remembrall" />
+      <item itemvalue="Application.SandwichExtractor" />
       <item itemvalue="Application.newClass" />
     </list>
     <recent_temporary>
@@ -83,6 +108,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -97,33 +123,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1602953633203">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1613482214710">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602953633203" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1603524734752">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603524734752" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1603524734752">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603524734752" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1603524734752">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603524734752" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1603524734752">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603524734752" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1603473522748">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1603473522748" />
-    <state x="65" y="0" key="new project wizard" timestamp="1603524727635">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1603524727635" />
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1613482214710" />
   </component>
 </project>
