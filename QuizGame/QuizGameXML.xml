@@ -1,0 +1,133 @@
+<!DOCTYPE quizgame [
+<!ELEMENT quizgame (quizquestions)>
+<!ELEMENT quizquestions (quizquestion+)>
+<!ELEMENT quizquestion (question, option+)>
+<!ATTLIST option isTrue (true | false) #REQUIRED>
+<!ELEMENT question (#PCDATA)>
+<!ELEMENT option (#PCDATA)>
+]>
+
+<quizgame>
+    <quizquestions>
+                <quizquestion>
+                    <question>Как се нарича подреждането на събитията, според последователността, в която са се случили:</question>
+                    <option isTrue="false">История</option>
+                    <option isTrue="true">Хронология</option>
+                    <option isTrue="false">Геология</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Кое тракийско племе създава голяма и трайна държава:</question>
+                    <option isTrue="true">Одриси</option>
+                    <option isTrue="false">Беси</option>
+                    <option isTrue="false">Мизи</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Кой български цар победил епирския владетел Теодор Комнин в битката при Клокотница на 9 март 1230 г. “:</question>
+                    <option isTrue="false">Калоян</option>
+                    <option isTrue="false">Симеон</option>
+                    <option isTrue="true">Иван Асен II</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Кой български хан победил арабите край Константинопол през 718 г., като по този начин спасил Европа от тяхното нашествие:</question>
+                    <option isTrue="false">Аспарух</option>
+                    <option isTrue="true">Тервел</option>
+                    <option isTrue="false">Омуртаг</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Апокрифите са:</question>
+                    <option isTrue="false">Произведения, описващи живота на светци</option>
+                    <option isTrue="true">Анонимни средновековни ръкописи</option>
+                    <option isTrue="false">Записи на устната традиция за живота на християнски мъченици</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Славянската писменост, създадена от Кирил и Методий, е известна като:</question>
+                    <option isTrue="false">Кирилица</option>
+                    <option isTrue="true">Глаголица</option>
+                    <option isTrue="false">Димотическо писмо</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Според Търновската конституция България е:</question>
+                    <option isTrue="false">Абсолютна монархия</option>
+                    <option isTrue="false">Парламентарна република</option>
+                    <option isTrue="true">Наследствена монархия с народно събрание</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Кой е първият генерал-губернатор на Източна Румелия”:</question>
+                    <option isTrue="false">Марко Балабанов</option>
+                    <option isTrue="false">Захари Стоянов</option>
+                    <option isTrue="true">Алеко Богориди</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Кой известен чужденец е изпратил от Пазарджик кореспонденция за жертвите в Батак през 1876 г.:</question>
+                    <option isTrue="false">Юджийн Скайлър</option>
+                    <option isTrue="true">Джанюариъс Макгахан</option>
+                    <option isTrue="false">Х. Елиът</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Датата 3 април 1860 г. се свързва с:</question>
+                    <option isTrue="false">Избухването на Априлското въстание</option>
+                    <option isTrue="true">Провеждането на Великденската акция</option>
+                    <option isTrue="false">Учредяването на Априловската гимназия</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Коя от Великите сили се обявява в защита на Съединението</question>
+                    <option isTrue="false">Франция</option>
+                    <option isTrue="false">Русия</option>
+                    <option isTrue="true">Англия</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Коя е южната граница на създадената през 681 г. Дунавска България</question>
+                    <option isTrue="false">Карпатите</option>
+                    <option isTrue="true">Стара планина</option>
+                    <option isTrue="false">Черно море</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Хан Омуртаг въвежда комитатите, за да:</question>
+                    <option isTrue="false">Стимулира развитието на търговията</option>
+                    <option isTrue="false">Разшири границите на ханството</option>
+                    <option isTrue="true">Централизира държавата</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Хрисовулът е:</question>
+                    <option isTrue="false">Златна монета</option>
+                    <option isTrue="false">Съд за вино</option>
+                    <option isTrue="true">Златопечатна грамота</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Вторият български монарх след Освобождението е:</question>
+                    <option isTrue="false">Александър Батенберг</option>
+                    <option isTrue="true">Фердинад І</option>
+                    <option isTrue="false">Симеон ІІ</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Освободителното въстание на Асеневци избухва през:</question>
+                    <option isTrue="false">1187 г.</option>
+                    <option isTrue="true">1185 г.</option>
+                    <option isTrue="false">1196 г.</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>През 1846 г. Найден Геров организира в Копривщица:</question>
+                    <option isTrue="true">Първото класно училище</option>
+                    <option isTrue="false">Първата гимназия</option>
+                    <option isTrue="false">Първото читалище</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Св. Методий е назначен за архиепископ в:</question>
+                    <option isTrue="true">Великоморавия</option>
+                    <option isTrue="false">Панония</option>
+                    <option isTrue="false">Германия</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Първият български екзарх е:</question>
+                    <option isTrue="false">Антим І</option>
+                    <option isTrue="true">Иларион Ловчански</option>
+                    <option isTrue="false">Йосиф І</option>
+                </quizquestion>
+                <quizquestion>
+                    <question>Априлското въстание е обявено на 20 април 1876 г. в:</question>
+                    <option isTrue="false">Панагюрище</option>
+                    <option isTrue="true">Копривщица</option>
+                    <option isTrue="false">Стрелча</option>
+                </quizquestion>
+    </quizquestions>
+</quizgame>
